@@ -9,3 +9,9 @@ services:
       - .:/app
     environment:
       - PYTHONUNBUFFERED=1
+
+  test:
+    build: .
+    command: python manage.py test
+    volumes:
+      - .:/app
